@@ -27,14 +27,14 @@ namespace Algos.Tests
         public void MaximumMinimumPath_DFS(Tuple<int[][], int> input)
         {
             var s = new MaximumMinimumPathSolution();
-            Assert.That(s.MaximumMinimumPath_DFS(input.Item1), Is.EqualTo(input.Item2));
+            Assert.That(s.MaximumMinimumPath_DFS(input.Item1.Clone() as int[][]), Is.EqualTo(input.Item2));
         }
 
         [Test, TestCaseSource(nameof(_cases))]
         public void MaximumMinimumPath_Dijkstra(Tuple<int[][], int> input)
         {
             var s = new MaximumMinimumPathSolution();
-            Assert.That(s.MaximumMinimumPath_Dijkstra(input.Item1), Is.EqualTo(input.Item2));
+            Assert.That(s.MaximumMinimumPath_Dijkstra(input.Item1.Clone() as int[][]), Is.EqualTo(input.Item2));
         }
     }
 }
